@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Background Worker</string>
+
+    <string name="job_id">Job: %1$s</string>
+    <string name="job_duration">Duration: %1$s sec.</string>
+    <string name="start_background_jobs">Start Jobs Bunch</string>
+    <string name="queue_empty">Background queue is empty now</string>
+    <string name="click_the_button_to_start">Please use the button bellow\nto start background processing.</string>
+</resources>

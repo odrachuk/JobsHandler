@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="data" type="com.softsandr.backgroundworker.JobItem"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+        <TextView android:id="@+id/recycler_item__job_id"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textAppearance="?attr/textAppearanceListItem"
+                  android:text="@{@string/job_id(data.id)}"
+                  android:layout_marginTop="@dimen/recycler_item_job_margin_vertical"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView android:id="@+id/recycler_item__job_duration"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textAppearance="?attr/textAppearanceListItemSecondary"
+                  android:text="@{@string/job_duration(data.duration)}"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginBottom="5dp"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@id/recycler_item__job_id"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
